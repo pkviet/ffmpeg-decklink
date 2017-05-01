@@ -102,6 +102,7 @@ class Ffmpeg < Formula
       --enable-shared
       --enable-pthreads
       --enable-gpl
+      --enable-nonfree
       --enable-version3
       --enable-hardcoded-tables
       --enable-avresample

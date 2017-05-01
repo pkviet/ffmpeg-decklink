@@ -9,7 +9,47 @@
 brew install https://github.com/pkviet/ffmpeg-decklink/raw/master/Library/Formula/decklink.rb
 brew install https://github.com/pkviet/ffmpeg-decklink/raw/master/Library/Formula/ffmpeg.rb --with-decklink
 ```
-5/1/2017:
+If you want to have latest nightly:
+```bash
+brew install https://github.com/pkviet/ffmpeg-decklink/raw/master/Library/Formula/decklink.rb
+brew install https://github.com/pkviet/ffmpeg-decklink/raw/master/Library/Formula/ffmpeg.rb --with-decklink --HEAD
+```
+In order to have nightly with decklink, fdk-aac and librtmp:
+```bash
+brew install https://github.com/pkviet/ffmpeg-decklink/raw/master/Library/Formula/decklink.rb
+brew install https://github.com/pkviet/ffmpeg-decklink/raw/master/Library/Formula/ffmpeg.rb --with-decklink --with-rtmpdump --with-fdk-aac --HEAD
+```
+
+NB: installation of the package manager Brew
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+# What's New
+**5/1/2017:**
 DeckLink SDK updated from 10.4 to 10.9
+
 ffmpeg updated from release 2.8.3 to 3.3
-ffmpeg brew formula updated to latest one from homebrew repo
+
+ffmpeg brew formula updated to latest one from homebrew main repo
+
+## ffmpeg decklink cheat sheet
+
+list devices:
+```bash
+ffmpeg -list_devices 1 -f decklink -i dummy
+```
+list supported formats:
+```bash
+ffmpeg -list_formats 1 -f decklink -i "My Decklinck Card"
+```
+
+## Credits
+dche who originally created the formulae with decklink support
+
+And all the maintainers of the ffmpeg formula on the officiel brew repo. 
+
+
+
+
+
