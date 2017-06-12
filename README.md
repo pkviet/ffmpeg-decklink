@@ -19,6 +19,11 @@ In order to have nightly with decklink, fdk-aac and librtmp:
 brew install https://github.com/pkviet/ffmpeg-decklink/raw/master/Library/Formula/decklink.rb
 brew install https://github.com/pkviet/ffmpeg-decklink/raw/master/Library/Formula/ffmpeg.rb --with-decklink --with-rtmpdump --with-fdk-aac --HEAD
 ```
+Uninstall:
+```bash
+brew remove ffmpeg
+brew cleanup -s
+```
 
 NB: installation of the package manager Brew
 ```bash
