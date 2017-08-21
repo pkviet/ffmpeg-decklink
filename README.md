@@ -31,6 +31,8 @@ NB: installation of the package manager Brew
 ```
 
 # What's New
+**8/22/2017**
+DeckLink SDK updated from 10.9 to 10.9.5
 **5/1/2017:**
 DeckLink SDK updated from 10.4 to 10.9
 
