@@ -188,15 +188,6 @@ class Ffmpeg < Formula
     # the "--enable-nonfree" flag, which produces unredistributable libraries
     args << "--enable-nonfree" if build.with?("fdk-aac") || build.with?("openssl")
 
-    # A bug in a dispatch header on 10.10, included via CoreFoundation,
-    # prevents GCC from building VDA support.
-    # See: https://github.com/Homebrew/homebrew/issues/33741
-    if !build.head? && (MacOS.version != :yosemite || ENV.compiler == :clang)
-      args << "--enable-vda"
-    else
-      args << "--disable-vda"
-    end
-
     system "./configure", *args
 
     system "make", "install"
