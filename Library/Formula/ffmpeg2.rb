@@ -1,4 +1,4 @@
-class Ffmpeg < Formula
+class Ffmpeg2 < Formula
   desc "Play, record, convert, and stream audio and video"
   homepage "https://ffmpeg.org/"
 
