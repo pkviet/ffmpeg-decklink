@@ -31,6 +31,14 @@ NB: installation of the package manager Brew
 ```
 
 # What's New
+**12/20/2017**
+New formulas added.  
+Formula ffmpeg points head to my ffmpeg dev branch (with patches for libopus and aac)
+Formula ffmpeg2 points head to my ffmpeg dev3.2 branch (same as above on top of ffmepg 3.2)  
+Formula ffmpeg3 points head to ffmpeg master head
+
+
+
 **8/22/2017**
 DeckLink SDK updated from 10.9 to 10.9.5
 
