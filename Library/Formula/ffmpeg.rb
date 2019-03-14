@@ -54,7 +54,7 @@ class Ffmpeg < Formula
   option "without-x264", "Disable H.264 encoder"
   option "without-xvid", "Disable Xvid MPEG-4 video encoder"
   option "with-decklink", "Enable using Blackmagic Design's Decklink devices."
-
+  option "with-srt", "Enable SRT library"
 
   deprecated_option "with-ffplay" => "with-sdl2"
   deprecated_option "with-sdl" => "with-sdl2"
@@ -104,7 +104,8 @@ class Ffmpeg < Formula
   depends_on "xz" => :optional
   depends_on "zeromq" => :optional
   depends_on "zimg" => :optional
-    depends_on "decklink" => :optional
+  depends_on "decklink" => :optional
+  depends_on "srt" => :optional
 
   if build.with? "decklink"
     # patch `common.mk` for using `clang++` to compile `.cpp` files,
@@ -169,6 +170,7 @@ class Ffmpeg < Formula
     args << "--enable-videotoolbox" if MacOS.version >= :mountain_lion
     args << "--enable-openssl" if build.with? "openssl"
     args << "--enable-decklink" if build.with? "decklink"
+    args << "--enable-libsrt" if build.with? "srt"
 
     if build.with? "xz"
       args << "--enable-lzma"
