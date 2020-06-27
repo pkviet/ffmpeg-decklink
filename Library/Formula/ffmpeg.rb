@@ -25,7 +25,7 @@ class Ffmpeg < Formula
     sha256 "35a316fe3ac1be79163726e5b45f53c07ab25f10155b69d2df43d1a72878b7c8" => :el_capitan
   end
 
- head "https://github.com/pkviet/FFmpeg.git", :branch => "dev"
+ head "https://github.com/pkviet/FFmpeg.git", :branch => "pce2"
 
   option "with-chromaprint", "Enable the Chromaprint audio fingerprinting library"
   option "with-fdk-aac", "Enable the Fraunhofer FDK AAC library"
